@@ -1,5 +1,6 @@
 //handle button
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class MyBox extends StatelessWidget{
   //blue print
@@ -15,6 +16,8 @@ class MyBox extends StatelessWidget{
   Widget build(BuildContext context){
 
     return Center(child:Container(
+      width: 400,
+      height: 400,
       padding: EdgeInsets.all(12),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
