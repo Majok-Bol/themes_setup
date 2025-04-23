@@ -1,21 +1,26 @@
-//handle how box is created
+//handle button
 import 'package:flutter/cupertino.dart';
-import 'package:themes_setup/components/button.dart';
 
 class MyBox extends StatelessWidget{
+  //blue print
+  //to create child widget
+  //and add color
+  final Widget?child;
 
-  void Function()?onTap;
-   MyBox({super.key,required this.onTap});
+  final Color?color;
+
+  const MyBox({super.key,required this.child,required this.color});
+
   @override
   Widget build(BuildContext context){
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-      padding: EdgeInsets.all(10),
-      width: 100,
-      height: 200,
-      child: Center(child: Text('SET THEME')),
 
-    ),);
+    return Center(child:Container(
+      padding: EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        color: color,
+      ),
+      child: child,
+    ));
   }
 }
